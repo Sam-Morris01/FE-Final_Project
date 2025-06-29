@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './footer.css';
-import fbIcon from '../../assets/fb.png';
-import githubIcon from '../../assets/github.png';
+import fbIcon from '../../assets/logos/fb.svg';
+import githubIcon from '../../assets/logos/github.svg';
 
 const Footer = () => {
   return (

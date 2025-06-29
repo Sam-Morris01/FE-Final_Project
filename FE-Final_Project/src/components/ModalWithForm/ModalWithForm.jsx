@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './ModalWithForm.css';
-import closeIcon from '../../assets/close.svg';
+import closeIcon from '../../assets/icons/close.svg';
 import useModalClose from '../../hooks/useModalClose';
 
 function ModalWithForm({ isOpen, onClose, title, children, footer }) {

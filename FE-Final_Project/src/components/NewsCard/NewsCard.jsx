@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './NewsCard.css';
-import trashIcon from '../../assets/trash.svg';
-import bookmarkIcon from '../../assets/bookmark.svg';
-import savedBookmarkIcon from '../../assets/saved-bookmark.svg';
+import trashIcon from '../../assets/icons/trash.svg';
+import bookmarkIcon from '../../assets/icons/bookmark.svg';
+import savedBookmarkIcon from '../../assets/icons/saved-bookmark.svg';
 import { useUser } from '../../contexts/UserContext';
 import { useSavedArticles } from '../../contexts/SavedArticlesContext';
 

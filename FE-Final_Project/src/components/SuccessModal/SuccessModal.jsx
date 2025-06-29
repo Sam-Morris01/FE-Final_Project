@@ -1,6 +1,6 @@
 import React from "react";
 import "./SuccessModal.css";
-import closeIcon from '../../assets/close.svg';
+import closeIcon from '../../assets/icons/close.svg';
 
 const SuccessModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;

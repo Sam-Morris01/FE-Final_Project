@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './Header.css'
-import logo from '../../assets/logo.png'
-import close from '../../assets/back.svg'
-import logout from '../../assets/logout.svg'
-import logoutBlack from '../../assets/logout-black.svg'
-import closeIcon from '../../assets/close.svg'
+import close from '../../assets/icons/back.svg'
+import logout from '../../assets/icons/logout.svg'
+import logoutBlack from '../../assets/icons/logout-black.svg'
+import closeIcon from '../../assets/icons/close.svg'
 import { useUser } from '../../contexts/UserContext';
 
 function Header({ onSignUpClick, isModalOpen, onModalClose }) {

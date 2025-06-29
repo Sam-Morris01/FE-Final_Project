@@ -1,5 +1,5 @@
 import './about.css';
-import ProfileImage from '../../assets/Profile.png';
+import ProfileImage from '../../assets/image/Profile.png';
 
 const About = () => (
   <div className="about-container">

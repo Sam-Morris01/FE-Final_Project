@@ -1,5 +1,5 @@
 import './NothingFound.css';
-import notFoundIcon from '../../assets/not-found.svg';
+import notFoundIcon from '../../assets/icons/not-found.svg';
 
 function NothingFound() {
   return (
