@@ -1,4 +1,5 @@
-import { baseUrl, checkResponse, mockSignIn, mockCheckToken } from "./API";
+import { baseUrl, checkResponse } from "./helpers";
+import { mockSignIn, mockCheckToken } from "./authAPI";
 
 function signUp({ name, avatar, email, password }) {
   return fetch(`${baseUrl}/signup`, {

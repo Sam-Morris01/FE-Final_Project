@@ -5,7 +5,7 @@ import NewsCardList from '../NewsCardList/NewsCardList.jsx'
 import Preloader from '../Preloader/Preloader.jsx'
 import NothingFound from '../NothingFound/NothingFound.jsx'
 import { useState } from 'react'
-import { searchNews } from '../../utils/API'
+import { searchNews } from '../../utils/newsAPI'
 
 function Main({ onSignUpClick }) {
     const [visibleCards, setVisibleCards] = useState(3);
@@ -28,7 +28,7 @@ function Main({ onSignUpClick }) {
                 const transformedArticles = response.articles.map((article, index) => ({
                     id: index + 1,
                     image: article.urlToImage || 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
-                    category: 'News',
+                    category: "News",
                     date: new Date(article.publishedAt).toLocaleDateString('en-US', {
                         year: 'numeric',
                         month: 'long',
