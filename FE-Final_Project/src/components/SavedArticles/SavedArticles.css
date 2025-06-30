@@ -12,7 +12,7 @@
   padding: 0 20px;
 }
 
-.saved-articles__header{
+.saved-articles__header {
   background-color: white;
 }
 
@@ -40,7 +40,7 @@
   line-height: 24px;
   letter-spacing: 0px;
   text-align: left;
-  color: #1A1B2280;
+  color: #1a1b2280;
 }
 
 .saved-articles__subtitle {
@@ -49,10 +49,10 @@
   font-size: 40px;
   line-height: 46px;
   text-align: left;
-  color: #1A1B22;
+  color: #1a1b22;
 }
 
-.saved-articles__keyword{
+.saved-articles__keyword {
   font-family: Roboto;
   font-weight: 400;
   font-size: 18px;
@@ -60,7 +60,7 @@
   text-align: left;
 }
 
-.saved-articles__keyword-text{
+.saved-articles__keyword-text {
   font-family: Roboto;
   font-weight: 700;
   font-size: 18px;
@@ -72,8 +72,6 @@
   padding: 40px;
 }
 
-
-
 .saved-articles__placeholder {
   text-align: center;
   color: #999;
@@ -82,4 +80,4 @@
 
 .saved-articles__placeholder p {
   margin: 0;
-} 
+}

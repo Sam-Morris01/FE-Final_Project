@@ -37,17 +37,16 @@
 }
 
 .main-heading {
-  font-family: 'Roboto-Slab', serif;
+  font-family: "Roboto-Slab", serif;
   font-size: 40px;
   font-weight: 400;
   line-height: 46px;
   color: rgba(26, 27, 34, 1);
   margin-bottom: 0px;
-
 }
 
 .main-paragraph {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -90,9 +89,8 @@
     margin-top: 33px;
   }
 
-
   .main-paragraph {
-    margin-top: 0px
+    margin-top: 0px;
   }
 
   .text-content {
@@ -105,7 +103,6 @@
     padding-top: 61px;
     align-items: flex-start;
   }
-
 }
 
 @media (max-width: 635px) {

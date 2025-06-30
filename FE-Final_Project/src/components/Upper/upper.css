@@ -1,28 +1,28 @@
 .upper {
-    height: 496px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    position: relative;
-    background: url('../../assets/image/main-bg.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 80px;
-    max-width: 2000px;
+  height: 496px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  position: relative;
+  background: url("../../assets/image/main-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 80px;
+  max-width: 2000px;
 }
 
 @media (max-width: 965px) {
-    .upper {
-        height: 320px;
-    }
+  .upper {
+    height: 320px;
+  }
 }
 
 @media (max-width: 680px) {
-    .upper {
-        height: 536px;
-        background-size: cover;
-    }
+  .upper {
+    height: 536px;
+    background-size: cover;
+  }
 }

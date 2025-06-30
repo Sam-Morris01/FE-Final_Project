@@ -1,6 +1,6 @@
-import React from 'react';
-import { Navigate } from 'react-router-dom';
-import { useUser } from '../../contexts/UserContext';
+import React from "react";
+import { Navigate } from "react-router-dom";
+import { useUser } from "../../contexts/UserContext";
 
 function ProtectedRoute({ children }) {
   const { isLoggedIn } = useUser();
@@ -12,4 +12,4 @@ function ProtectedRoute({ children }) {
   return children;
 }
 
-export default ProtectedRoute; 
+export default ProtectedRoute;

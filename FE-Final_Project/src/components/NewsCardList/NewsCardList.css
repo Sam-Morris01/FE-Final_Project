@@ -1,55 +1,51 @@
 .news-card-list {
-        list-style: none;
-        display: grid;
-        justify-content: center;
-        grid-template-columns: repeat(auto-fit, 400px);
-        grid-gap: 8px 8px;
-        padding: 0;
-        margin: 0;
-} 
+  list-style: none;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 400px);
+  grid-gap: 8px 8px;
+  padding: 0;
+  margin: 0;
+}
 
 .news-card-list__show-more {
-    background: rgba(255, 255, 255, 1);
-    border: none;
-    border-radius: 80px;
-    color: rgba(26, 27, 34, 1);
-    cursor: pointer;
-    font-family: 'Roboto', Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 24px;
-    margin: 0 auto;
-    margin-top: 64px;
-    padding: 20px 98px;
-    transition: background-color 0.3s ease;
+  background: rgba(255, 255, 255, 1);
+  border: none;
+  border-radius: 80px;
+  color: rgba(26, 27, 34, 1);
+  cursor: pointer;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 0 auto;
+  margin-top: 64px;
+  padding: 20px 98px;
+  transition: background-color 0.3s ease;
 }
 
 .news-card-list__show-more:hover {
-    background: #E8E8E8;
+  background: #e8e8e8;
 }
 
-
 @media (max-width: 768px) {
-    .news-card-list {
-        grid-template-columns: repeat(auto-fit, 224px);
-        padding-left: 40px;
-        padding-right: 40px;
-    }
+  .news-card-list {
+    grid-template-columns: repeat(auto-fit, 224px);
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 @media (max-width: 470px) {
-    .news-card-list {
-        grid-template-columns: repeat(auto-fit, 400px);
-        padding-left: 16px;
-        padding-right: 16px;
-    }
+  .news-card-list {
+    grid-template-columns: repeat(auto-fit, 400px);
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 
-    .news-card-list__show-more {
-        font-size: 16px;
-        line-height: 20px;
-        padding: 16px 40px;
-    }
+  .news-card-list__show-more {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 16px 40px;
+  }
 }
-
-
-

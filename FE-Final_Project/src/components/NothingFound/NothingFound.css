@@ -14,7 +14,7 @@
 }
 
 .nothing-found__title {
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   font-size: 26px;
   font-weight: 400;
   line-height: 30px;
@@ -23,7 +23,7 @@
 }
 
 .nothing-found__text {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -36,21 +36,21 @@
   .nothing-found {
     padding: 40px 20px;
   }
-  
+
   .nothing-found__icon {
     width: 80px;
     height: 80px;
     margin-bottom: 16px;
   }
-  
+
   .nothing-found__title {
     font-size: 22px;
     line-height: 26px;
     margin-bottom: 12px;
   }
-  
+
   .nothing-found__text {
     font-size: 16px;
     line-height: 22px;
   }
-} 
+}

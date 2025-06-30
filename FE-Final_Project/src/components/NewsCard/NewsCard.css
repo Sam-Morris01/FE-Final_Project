@@ -4,11 +4,13 @@
   overflow: hidden;
   width: 400px;
   margin: 0 auto;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .news-card:hover {
@@ -39,12 +41,12 @@
   left: 24px;
   background: #fff;
   color: rgba(0, 0, 0, 1);
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   font-weight: 500;
   font-size: 14px;
   padding: 8px 22px;
   border-radius: 18px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .news-card__action-tooltip-wrapper {
@@ -93,11 +95,11 @@
   margin: 0 0 8px 0;
   color: rgba(26, 27, 34, 1);
   text-align: left;
-  font-family: 'Roboto-Slab', serif;
+  font-family: "Roboto-Slab", serif;
 }
 
 .news-card__description {
-  color:rgba(26, 27, 34, 1);
+  color: rgba(26, 27, 34, 1);
   font-size: 16px;
   font-weight: 400;
   margin: 0 0 12px 0;
@@ -105,14 +107,13 @@
 }
 
 .news-card__source {
-    font-family: 'Roboto-Slab', serif;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
-    color: rgba(182, 188, 191, 1);
-    
+  font-family: "Roboto-Slab", serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: rgba(182, 188, 191, 1);
 }
 
 .news-card__action-icon {
@@ -132,9 +133,9 @@
   color: #222;
   border-radius: 10px;
   padding: 10px 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   font-size: 15px;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   white-space: nowrap;
   z-index: 10;
   opacity: 1;
@@ -152,22 +153,20 @@
   .news-card__category {
     top: 8px;
     left: 8px;
-    
   }
   .news-card__action-tooltip-wrapper {
     top: 8px;
     right: 8px;
   }
 
-  .news-card__tooltip{
+  .news-card__tooltip {
     font-size: 12px;
-    max-width: 110px; 
+    max-width: 110px;
     text-align: center;
   }
 }
 
 @media (max-width: 470px) {
-
   .news-card {
     width: 288px;
   }
@@ -199,6 +198,4 @@
   .news-card__description {
     margin-bottom: 19px;
   }
-
-
 }

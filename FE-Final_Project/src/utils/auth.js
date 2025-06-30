@@ -13,13 +13,12 @@ function signUp({ name, avatar, email, password }) {
 
 function signIn({ email, password }) {
   // Use mock sign in for frontend-only development
-  return mockSignIn({ email, password })
-    .then((data) => {
-      if (data.jwt) {
-        setToken(data.jwt);
-      }
-      return data;
-    });
+  return mockSignIn({ email, password }).then((data) => {
+    if (data.jwt) {
+      setToken(data.jwt);
+    }
+    return data;
+  });
 }
 
 function setToken(token) {

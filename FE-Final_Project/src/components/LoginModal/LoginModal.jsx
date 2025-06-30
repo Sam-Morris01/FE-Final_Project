@@ -1,9 +1,16 @@
-import React, { useState } from 'react';
-import ModalWithForm from '../ModalWithForm/ModalWithForm';
+import React, { useState } from "react";
+import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
-function LoginModal({ isOpen, onClose, onSwitchToRegister, onLogin, isLoading = false, error = '' }) {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+function LoginModal({
+  isOpen,
+  onClose,
+  onSwitchToRegister,
+  onLogin,
+  isLoading = false,
+  error = "",
+}) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [touched, setTouched] = useState({ email: false, password: false });
 
   const isEmailValid = email.match(/^\S+@\S+\.\S+$/);
@@ -24,24 +31,31 @@ function LoginModal({ isOpen, onClose, onSwitchToRegister, onLogin, isLoading = 
   const footer = (
     <>
       <span>or </span>
-      <button className="modal__form-footer-link" type="button" onClick={onSwitchToRegister}>
+      <button
+        className="modal__form-footer-link"
+        type="button"
+        onClick={onSwitchToRegister}
+      >
         Sign up
       </button>
     </>
   );
 
   return (
-    <ModalWithForm isOpen={isOpen} onClose={onClose} title="Sign in" footer={footer}>
+    <ModalWithForm
+      isOpen={isOpen}
+      onClose={onClose}
+      title="Sign in"
+      footer={footer}
+    >
       <form className="modal__form" onSubmit={handleSubmit}>
-        {error && (
-          <div className="modal__error">
-            {error}
-          </div>
-        )}
+        {error && <div className="modal__error">{error}</div>}
         <div className="modal__form-field">
-          <label className="modal__label" htmlFor="login-email">Email</label>
+          <label className="modal__label" htmlFor="login-email">
+            Email
+          </label>
           <input
-            className={`modal__input${touched.email && !isEmailValid ? ' modal__input_invalid' : ''}`}
+            className={`modal__input${touched.email && !isEmailValid ? " modal__input_invalid" : ""}`}
             id="login-email"
             name="email"
             type="email"
@@ -57,9 +71,11 @@ function LoginModal({ isOpen, onClose, onSwitchToRegister, onLogin, isLoading = 
           )}
         </div>
         <div className="modal__form-field">
-          <label className="modal__label" htmlFor="login-password">Password</label>
+          <label className="modal__label" htmlFor="login-password">
+            Password
+          </label>
           <input
-            className={`modal__input${touched.password && !isPasswordValid ? ' modal__input_invalid' : ''}`}
+            className={`modal__input${touched.password && !isPasswordValid ? " modal__input_invalid" : ""}`}
             id="login-password"
             name="password"
             type="password"
@@ -71,16 +87,16 @@ function LoginModal({ isOpen, onClose, onSwitchToRegister, onLogin, isLoading = 
             required
           />
         </div>
-        <button 
-          className="modal__submit-button" 
-          type="submit" 
+        <button
+          className="modal__submit-button"
+          type="submit"
           disabled={!isFormValid}
         >
-          {isLoading ? 'Signing in...' : 'Sign in'}
+          {isLoading ? "Signing in..." : "Sign in"}
         </button>
       </form>
     </ModalWithForm>
   );
 }
 
-export default LoginModal; 
+export default LoginModal;

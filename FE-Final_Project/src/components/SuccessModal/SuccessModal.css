@@ -23,11 +23,10 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-
 }
 
 .success-modal__message {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: 900;
   font-size: 24px;
   line-height: 100%;
@@ -60,53 +59,53 @@
 }
 
 .success-modal__sign-in {
-    background: none;
-    border: none;
-    color: #2F71E5;
-    cursor: pointer;
-    font-size: 14px;
-    font-family: 'Inter', Arial, sans-serif;
-    text-decoration: none;
-    padding: 0;
-    margin-left: 2px;
-    transition: color 0.2s;
-    text-align: left;
+  background: none;
+  border: none;
+  color: #2f71e5;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Inter", Arial, sans-serif;
+  text-decoration: none;
+  padding: 0;
+  margin-left: 2px;
+  transition: color 0.2s;
+  text-align: left;
 }
 
 .success-modal__sign-in:hover {
   background: #125ea2;
-} 
-
-@media (max-width: 590px) { 
-    .success-modal__container{
-        width: 300px;
-        padding-right: 30px;
-        padding-bottom: 40px;
-    }
-
-    .success-modal__message{
-        font-size: 20px;
-    }
-
-    .success-modal__sign-in{
-        font-size: 14px;
-    }
 }
 
-@media (max-width: 470px) { 
-    .success-modal__container{
-        width: 200px;
-        padding-right: 16px;
-        padding-left: 16px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
+@media (max-width: 590px) {
+  .success-modal__container {
+    width: 300px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+  }
 
-    .success-modal__message{
-        font-size: 16px;
-    }
+  .success-modal__message {
+    font-size: 20px;
+  }
 
-    .success-modal__sign-in{
-        font-size: 12px;
-    }
-}   
+  .success-modal__sign-in {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 470px) {
+  .success-modal__container {
+    width: 200px;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .success-modal__message {
+    font-size: 16px;
+  }
+
+  .success-modal__sign-in {
+    font-size: 12px;
+  }
+}

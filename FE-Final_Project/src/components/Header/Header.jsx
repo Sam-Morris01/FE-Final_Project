@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import './Header.css'
-import close from '../../assets/icons/back.svg'
-import logout from '../../assets/icons/logout.svg'
-import logoutBlack from '../../assets/icons/logout-black.svg'
-import closeIcon from '../../assets/icons/close.svg'
-import { useUser } from '../../contexts/UserContext';
+import React, { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import "./Header.css";
+import close from "../../assets/icons/back.svg";
+import logout from "../../assets/icons/logout.svg";
+import logoutBlack from "../../assets/icons/logout-black.svg";
+import closeIcon from "../../assets/icons/close.svg";
+import { useUser } from "../../contexts/UserContext";
 
 function Header({ onSignUpClick, isModalOpen, onModalClose }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -14,12 +14,12 @@ function Header({ onSignUpClick, isModalOpen, onModalClose }) {
   const location = useLocation();
 
   const handleHomeClick = () => {
-    navigate('/');
+    navigate("/");
     setSidebarOpen(false);
   };
 
   const handleSavedArticlesClick = () => {
-    navigate('/saved-articles');
+    navigate("/saved-articles");
     setSidebarOpen(false);
   };
 
@@ -34,18 +34,18 @@ function Header({ onSignUpClick, isModalOpen, onModalClose }) {
   };
 
   // Determine which page we're on
-  const isOnSavedArticlesPage = location.pathname === '/saved-articles';
-  const isOnHomePage = location.pathname === '/';
+  const isOnSavedArticlesPage = location.pathname === "/saved-articles";
+  const isOnHomePage = location.pathname === "/";
 
   // Create dynamic header classes
-  const headerClasses = `header ${isOnSavedArticlesPage ? 'header--saved-articles' : ''} ${isOnHomePage ? 'header--home' : ''}`;
+  const headerClasses = `header ${isOnSavedArticlesPage ? "header--saved-articles" : ""} ${isOnHomePage ? "header--home" : ""}`;
 
   return (
     <header className={headerClasses}>
       <h1 className="header__name">NewsExplorer</h1>
       <div className="header__auth-buttons">
         <button
-          className={`home-button header__auth-button ${isOnHomePage ? 'header__auth-button--active' : ''}`}
+          className={`home-button header__auth-button ${isOnHomePage ? "header__auth-button--active" : ""}`}
           onClick={handleHomeClick}
         >
           Home
@@ -53,7 +53,7 @@ function Header({ onSignUpClick, isModalOpen, onModalClose }) {
         {isLoggedIn ? (
           <>
             <button
-              className={`saved-news-button header__auth-button ${isOnSavedArticlesPage ? 'header__auth-button--active' : ''}`}
+              className={`saved-news-button header__auth-button ${isOnSavedArticlesPage ? "header__auth-button--active" : ""}`}
               onClick={handleSavedArticlesClick}
             >
               Saved articles
@@ -63,7 +63,11 @@ function Header({ onSignUpClick, isModalOpen, onModalClose }) {
               onClick={handleLogout}
             >
               {currentUser?.name}
-              <img src={isOnSavedArticlesPage ? logoutBlack : logout} alt="Logout" className="header__logout-icon" />
+              <img
+                src={isOnSavedArticlesPage ? logoutBlack : logout}
+                alt="Logout"
+                className="header__logout-icon"
+              />
             </button>
           </>
         ) : (
@@ -77,7 +81,10 @@ function Header({ onSignUpClick, isModalOpen, onModalClose }) {
       </div>
       {/* Hamburger menu: only show if modal is not open */}
       {!isModalOpen && (
-        <button className="header__hamburger" onClick={() => setSidebarOpen(true)}>
+        <button
+          className="header__hamburger"
+          onClick={() => setSidebarOpen(true)}
+        >
           <span className="header__hamburger-bar" />
           <span className="header__hamburger-bar" />
         </button>
@@ -89,7 +96,10 @@ function Header({ onSignUpClick, isModalOpen, onModalClose }) {
         </button>
       )}
       {sidebarOpen && (
-        <div className="header__sidebar-overlay" onClick={() => setSidebarOpen(false)}>
+        <div
+          className="header__sidebar-overlay"
+          onClick={() => setSidebarOpen(false)}
+        >
           <nav className="header__sidebar">
             <button
               className="header__sidebar-close"
@@ -99,7 +109,9 @@ function Header({ onSignUpClick, isModalOpen, onModalClose }) {
               <img src={close} alt="Close menu" />
             </button>
             <div className="header__sidebar-content">
-              <span className="header__name header__sidebar-title">NewsExplorer</span>
+              <span className="header__name header__sidebar-title">
+                NewsExplorer
+              </span>
               <button
                 className="home-button header__sidebar-link"
                 onClick={handleHomeClick}

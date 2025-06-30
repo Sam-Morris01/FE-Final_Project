@@ -1,40 +1,40 @@
-import React, { useState } from 'react';
-import LoginModal from '../LoginModal/LoginModal';
-import RegisterModal from '../RegisterModal/RegisterModal';
-import SuccessModal from '../SuccessModal/SuccessModal';
-import { useUser } from '../../contexts/UserContext';
+import React, { useState } from "react";
+import LoginModal from "../LoginModal/LoginModal";
+import RegisterModal from "../RegisterModal/RegisterModal";
+import SuccessModal from "../SuccessModal/SuccessModal";
+import { useUser } from "../../contexts/UserContext";
 
 function AuthModalManager({ isOpen, onClose }) {
-  const [mode, setMode] = useState('login'); // 'login' or 'register'
+  const [mode, setMode] = useState("login"); // 'login' or 'register'
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
   const { handleLogin } = useUser();
 
   const handleSwitchToRegister = () => {
-    setMode('register');
-    setError('');
+    setMode("register");
+    setError("");
   };
-  
+
   const handleSwitchToLogin = () => {
-    setMode('login');
-    setError('');
+    setMode("login");
+    setError("");
   };
 
   const handleLoginSubmit = async (data) => {
     setIsLoading(true);
-    setError('');
-    
+    setError("");
+
     try {
       const result = await handleLogin(data.email, data.password);
       if (result.success) {
         onClose();
-        setError('');
+        setError("");
       } else {
-        setError(result.error || 'Login failed');
+        setError(result.error || "Login failed");
       }
     } catch (err) {
-      setError('An unexpected error occurred');
+      setError("An unexpected error occurred");
     } finally {
       setIsLoading(false);
     }
@@ -42,16 +42,16 @@ function AuthModalManager({ isOpen, onClose }) {
 
   const handleRegister = async (data) => {
     setIsLoading(true);
-    setError('');
-    
+    setError("");
+
     try {
       // Simulate registration logic
       // Show success modal after registration
       setIsSuccessModalOpen(true);
-      setMode('login'); // Optionally switch to login mode
+      setMode("login"); // Optionally switch to login mode
       onClose(); // Close the auth modal
     } catch (err) {
-      setError('Registration failed');
+      setError("Registration failed");
     } finally {
       setIsLoading(false);
     }
@@ -63,7 +63,7 @@ function AuthModalManager({ isOpen, onClose }) {
 
   return (
     <>
-      {mode === 'login' && (
+      {mode === "login" && (
         <LoginModal
           isOpen={isOpen && !isSuccessModalOpen}
           onClose={onClose}
@@ -73,7 +73,7 @@ function AuthModalManager({ isOpen, onClose }) {
           error={error}
         />
       )}
-      {mode === 'register' && (
+      {mode === "register" && (
         <RegisterModal
           isOpen={isOpen && !isSuccessModalOpen}
           onClose={onClose}
@@ -92,4 +92,4 @@ function AuthModalManager({ isOpen, onClose }) {
   );
 }
 
-export default AuthModalManager; 
+export default AuthModalManager;

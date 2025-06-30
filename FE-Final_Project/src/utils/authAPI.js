@@ -6,13 +6,13 @@ export const authorize = (email, password) => {
     setTimeout(() => {
       // Mock validation - you can customize these credentials
       if (email === "test@example.com" && password === "password123") {
-        resolve({ 
+        resolve({
           token: "mock-jwt-token-" + Date.now(),
           user: {
             _id: "mock-user-id",
             name: "Sam Morris",
-            email: email
-          }
+            email: email,
+          },
         });
       } else {
         reject(new Error("Invalid email or password"));
@@ -29,11 +29,12 @@ export const checkToken = (token) => {
       // Mock token validation
       if (token && token.startsWith("mock-jwt-token-")) {
         resolve({
-          data: { 
-            name: "Sam Morris", 
-            email: "test@example.com", 
+          data: {
+            name: "Sam Morris",
+            email: "test@example.com",
             _id: "mock-user-id",
-            avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+            avatar:
+              "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
           },
         });
       } else {
@@ -51,4 +52,4 @@ export const mockSignIn = async ({ email, password }) => {
 export const mockCheckToken = async (token) => {
   const response = await checkToken(token);
   return response.data;
-}; 
+};
