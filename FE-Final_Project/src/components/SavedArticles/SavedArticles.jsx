@@ -13,7 +13,7 @@ function SavedArticles() {
   };
 
   return (
-    <div className="saved-articles">
+    <main className="saved-articles">
       <div className="saved-articles__container">
         {savedArticles.length === 0 ? (
           <p className="saved-articles__subtitle">
@@ -21,7 +21,7 @@ function SavedArticles() {
           </p>
         ) : (
           <>
-            <div className="saved-articles__header">
+            <header className="saved-articles__header">
               <h3 className="saved-articles__title">Saved articles</h3>
               <h4 className="saved-articles__subtitle">
                 {currentUser?.name}, you have {savedArticles.length} saved
@@ -38,16 +38,16 @@ function SavedArticles() {
                   and 2 other
                 </span>
               </p>
-            </div>
+            </header>
           </>
         )}
       </div>
-      <div className="saved-articles__cards">
+      <section className="saved-articles__cards">
         <div className="saved-articles__cards-inner">
           <NewsCardList cards={savedArticles} onDeleteCard={handleDeleteCard} />
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 

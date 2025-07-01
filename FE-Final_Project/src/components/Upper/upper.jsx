@@ -8,10 +8,10 @@ function Upper({ onSignUpClick, onSearch }) {
   const { isLoggedIn } = useUser();
 
   return (
-    <div className="upper">
+    <section className="upper">
       <Header onSignUpClick={onSignUpClick} />
       <SearchForm onSearch={onSearch} />
-    </div>
+    </section>
   );
 }
 

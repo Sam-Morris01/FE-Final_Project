@@ -135,6 +135,7 @@
 }
 
 .sign-in-button {
+  font-family: "Roboto", sans-serif;
   height: 40px;
   width: 152px;
 }
@@ -268,7 +269,7 @@
   font-weight: 600;
   padding-left: 16px;
 
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   cursor: pointer;
 }
 
@@ -277,7 +278,7 @@
   border: 1px solid white;
   background: transparent;
   color: white;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 500;
   border-radius: 100px;

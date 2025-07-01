@@ -3,7 +3,7 @@ import notFoundIcon from "../../assets/icons/not-found.svg";
 
 function NothingFound() {
   return (
-    <div className="nothing-found">
+    <section className="nothing-found">
       <img
         src={notFoundIcon}
         alt="Nothing found"
@@ -13,7 +13,7 @@ function NothingFound() {
       <p className="nothing-found__text">
         Sorry, but nothing matched your search terms.
       </p>
-    </div>
+    </section>
   );
 }
 
