@@ -2,7 +2,15 @@ import React from "react";
 import "./SuccessModal.css";
 import closeIcon from "../../assets/icons/close.svg";
 
-const SuccessModal = ({ isOpen, onClose }) => {
+const SuccessModal = ({
+  isOpen,
+  onClose,
+  title = "",
+  message = "",
+  buttonText = "OK",
+  onButtonClick = null,
+  children,
+}) => {
   if (!isOpen) return null;
   return (
     <div className="success-modal__overlay" onClick={onClose}>
@@ -18,12 +26,17 @@ const SuccessModal = ({ isOpen, onClose }) => {
         >
           <img src={closeIcon} alt="Close" />
         </button>
-        <p className="success-modal__message">
-          Registration successfully completed!
-        </p>
-        <button className="success-modal__sign-in" onClick={onClose}>
-          Sign in
-        </button>
+        {title && <h2 className="success-modal__title">{title}</h2>}
+        {message && <p className="success-modal__message">{message}</p>}
+        {children}
+        {buttonText && (
+          <button
+            className="success-modal__sign-in"
+            onClick={onButtonClick || onClose}
+          >
+            {buttonText}
+          </button>
+        )}
       </div>
     </div>
   );

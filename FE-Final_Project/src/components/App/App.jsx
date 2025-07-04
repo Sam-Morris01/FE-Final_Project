@@ -20,11 +20,7 @@ function App() {
   return (
     <UserProvider>
       <SavedArticlesProvider>
-        <Header
-          onSignUpClick={handleOpenAuthModal}
-          isModalOpen={isAuthModalOpen}
-          onModalClose={handleCloseAuthModal}
-        />
+
         <Routes>
           <Route 
             path="/" 

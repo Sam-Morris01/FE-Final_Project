@@ -73,7 +73,9 @@
 }
 
 .success-modal__sign-in:hover {
-  background: #125ea2;
+  color: #125ea2;
+  background: none;
+  text-decoration: underline;
 }
 
 @media (max-width: 590px) {

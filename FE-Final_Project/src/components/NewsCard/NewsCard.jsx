@@ -83,7 +83,7 @@ const NewsCard = ({
   return (
     <div className="news-card" onClick={handleCardClick}>
       <div className="news-card__image-wrapper">
-        <img src={image} alt={title} className="news-card__image" />
+        <img src={image} alt={title} className="news-card__image" loading="lazy" />
         {isLoggedIn && <span className="news-card__category">{category}</span>}
         <div
           className="news-card__action-tooltip-wrapper"
@@ -114,10 +114,10 @@ const NewsCard = ({
         </div>
       </div>
       <div className="news-card__content">
-        <div className="news-card__date">{date}</div>
+        <time className="news-card__date" dateTime={date && new Date(date).toISOString().split('T')[0]}>{date}</time>
         <h2 className="news-card__title">{title}</h2>
         <p className="news-card__description">{description}</p>
-        <div className="news-card__source">{source}</div>
+        <cite className="news-card__source">{source}</cite>
       </div>
     </div>
   );

@@ -21,7 +21,7 @@ html {
    */
 
 body {
-  margin: 0;
+  margin: auto;
 }
 
 /**
@@ -30,6 +30,9 @@ body {
 
 main {
   display: block;
+  max-width: 1440px;
+  margin: 0 auto;
+
 }
 
 /**

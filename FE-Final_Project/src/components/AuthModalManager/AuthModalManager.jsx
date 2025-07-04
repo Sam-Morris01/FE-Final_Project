@@ -86,7 +86,10 @@ function AuthModalManager({ isOpen, onClose }) {
       <SuccessModal
         isOpen={isSuccessModalOpen}
         onClose={handleCloseSuccessModal}
-        message="Registration successful! You can now sign in."
+        title="Success!"
+        message="Registration successfully completed!"
+        buttonText="Sign in"
+        onButtonClick={handleCloseSuccessModal}
       />
     </>
   );

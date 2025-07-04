@@ -4,6 +4,10 @@
   text-align: center;
 }
 
+.search-section__text {
+  /* Add any styles here if needed, or move from .search-section_text if it existed */
+}
+
 .search-form__title {
   font-family: "Roboto Slab", serif;
   font-size: 60px;

@@ -5,6 +5,7 @@
 
 .main__news-cards {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   padding-top: 80px;
   padding-bottom: 64px;
@@ -57,6 +58,7 @@
   .main__news-cards-title {
     font-size: 30px;
     line-height: 34px;
+    margin-left: 0;
   }
 
   .main__news-cards {

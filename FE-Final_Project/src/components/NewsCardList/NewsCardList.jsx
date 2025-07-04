@@ -8,7 +8,7 @@ function NewsCardList({
   onDeleteCard,
 }) {
   return (
-    <div className="news-card-list__container">
+    <div className="news-card-list-container">
       <section className="news-card-list">
         {cards.map((card) => (
           <NewsCard

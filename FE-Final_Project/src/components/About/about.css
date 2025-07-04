@@ -1,4 +1,4 @@
-.about-container {
+.about {
   background: #fff;
   position: static;
   height: 464px;
@@ -11,10 +11,15 @@
   flex-direction: row;
   gap: 56px;
   align-items: flex-start;
+  justify-content: center;
+  text-align: center;
   margin-top: 0px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.profile-image-container {
+.about__profile-image-container {
   width: 464px;
   height: 464px;
   border-radius: 50%;
@@ -23,20 +28,20 @@
   flex-shrink: 0;
 }
 
-.profile-image {
+.about__profile-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-.text-content {
+.about__text-content {
   max-width: 600px;
-  text-align: left;
+  text-align: center;
   flex: 1;
 }
 
-.main-heading {
+.about__main-heading {
   font-family: "Roboto-Slab", serif;
   font-size: 40px;
   font-weight: 400;
@@ -45,7 +50,7 @@
   margin-bottom: 0px;
 }
 
-.main-paragraph {
+.about__main-paragraph {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -54,7 +59,7 @@
 }
 
 @media (max-width: 1024px) {
-  .about-container {
+  .about {
     flex-direction: row;
     align-items: flex-end;
     gap: 32px;
@@ -65,14 +70,14 @@
     margin-bottom: 61px;
   }
 
-  .profile-image-container {
+  .about__profile-image-container {
     margin-right: 0;
     margin-bottom: 30px;
     width: 232px;
     height: 232px;
   }
 
-  .text-content {
+  .about__text-content {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -83,21 +88,21 @@
 }
 
 @media (max-width: 768px) {
-  .profile-image-container {
+  .about__profile-image-container {
     width: 200px;
     height: 200px;
     margin-top: 33px;
   }
 
-  .main-paragraph {
+  .about__main-paragraph {
     margin-top: 0px;
   }
 
-  .text-content {
+  .about__text-content {
     gap: 16px;
   }
 
-  .about-container {
+  .about {
     padding: 0;
     margin-bottom: 0;
     padding-top: 61px;
@@ -106,7 +111,7 @@
 }
 
 @media (max-width: 635px) {
-  .about-container {
+  .about {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -116,4 +121,9 @@
     max-height: none;
     overflow-y: none;
   }
+}
+
+.success-modal__sign-in:hover {
+  opacity: 0.7;
+  background: none;
 }

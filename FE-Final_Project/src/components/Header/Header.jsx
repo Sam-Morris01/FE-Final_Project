@@ -38,47 +38,57 @@ function Header({ onSignUpClick, isModalOpen, onModalClose }) {
   const isOnHomePage = location.pathname === "/";
 
   // Create dynamic header classes
-  const headerClasses = `header ${isOnSavedArticlesPage ? "header--saved-articles" : ""} ${isOnHomePage ? "header--home" : ""}`;
+  const headerClasses = `header ${isOnSavedArticlesPage ? "header--theme-saved-articles" : ""} ${isOnHomePage ? "header--home" : ""}`;
 
   return (
     <header className={headerClasses}>
-      <h1 className="header__name">NewsExplorer</h1>
-      <div className="header__auth-buttons">
-        <button
-          className={`home-button header__auth-button ${isOnHomePage ? "header__auth-button--active" : ""}`}
-          onClick={handleHomeClick}
-        >
-          Home
-        </button>
-        {isLoggedIn ? (
-          <>
+      <a href="/" className="header__name" aria-label="NewsExplorer Home">NewsExplorer</a>
+      <nav className="header__auth-buttons">
+        <ul className="header__nav-list">
+          <li>
             <button
-              className={`saved-news-button header__auth-button ${isOnSavedArticlesPage ? "header__auth-button--active" : ""}`}
-              onClick={handleSavedArticlesClick}
+              className={`home-button header__auth-button ${isOnHomePage ? "header__auth-button--active" : ""}`}
+              onClick={handleHomeClick}
             >
-              Saved articles
+              Home
             </button>
-            <button
-              className="logout-button header__auth-button"
-              onClick={handleLogout}
-            >
-              {currentUser?.name}
-              <img
-                src={isOnSavedArticlesPage ? logoutBlack : logout}
-                alt="Logout"
-                className="header__logout-icon"
-              />
-            </button>
-          </>
-        ) : (
-          <button
-            className="sign-in-button header__auth-button"
-            onClick={onSignUpClick}
-          >
-            Sign In
-          </button>
-        )}
-      </div>
+          </li>
+          {isLoggedIn ? (
+            <>
+              <li>
+                <button
+                  className={`saved-news-button header__auth-button ${isOnSavedArticlesPage ? "header__auth-button--active" : ""}`}
+                  onClick={handleSavedArticlesClick}
+                >
+                  Saved articles
+                </button>
+              </li>
+              <li>
+                <button
+                  className="logout-button header__auth-button"
+                  onClick={handleLogout}
+                >
+                  {currentUser?.name}
+                  <img
+                    src={isOnSavedArticlesPage ? logoutBlack : logout}
+                    alt="Logout"
+                    className="header__logout-icon"
+                  />
+                </button>
+              </li>
+            </>
+          ) : (
+            <li>
+              <button
+                className="sign-in-button header__auth-button"
+                onClick={onSignUpClick}
+              >
+                Sign In
+              </button>
+            </li>
+          )}
+        </ul>
+      </nav>
       {/* Hamburger menu: only show if modal is not open */}
       {!isModalOpen && (
         <button

@@ -81,12 +81,16 @@
   flex-direction: column;
   gap: 12px;
   align-items: flex-start;
+  height: 100%;
 }
 
 .news-card__date {
   color: #bdbdbd;
   font-size: 1.1rem;
   margin-bottom: 4px;
+  font-weight: 400;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+
 }
 
 .news-card__title {
@@ -107,6 +111,7 @@
 }
 
 .news-card__source {
+  margin-top: auto;
   font-family: "Roboto-Slab", serif;
   font-weight: 700;
   font-size: 16px;
@@ -143,7 +148,7 @@
   transition: opacity 0.2s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1112px) {
   .news-card {
     width: 224px;
   }

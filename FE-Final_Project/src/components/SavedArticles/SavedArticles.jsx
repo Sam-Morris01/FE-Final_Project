@@ -3,6 +3,7 @@ import "./SavedArticles.css";
 import NewsCardList from "../NewsCardList/NewsCardList";
 import { useSavedArticles } from "../../contexts/SavedArticlesContext";
 import { useUser } from "../../contexts/UserContext";
+import Header from "../Header/Header";
 
 function SavedArticles() {
   const { savedArticles, unsaveArticle } = useSavedArticles();
@@ -13,6 +14,8 @@ function SavedArticles() {
   };
 
   return (
+    <>
+      <Header />
     <main className="saved-articles">
       <div className="saved-articles__container">
         {savedArticles.length === 0 ? (
@@ -48,6 +51,7 @@ function SavedArticles() {
         </div>
       </section>
     </main>
+    </>
   );
 }
 
