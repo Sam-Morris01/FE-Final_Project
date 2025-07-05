@@ -42,7 +42,13 @@ function Header({ onSignUpClick, isModalOpen, onModalClose }) {
 
   return (
     <header className={headerClasses}>
-      <a href="/" className="header__name" aria-label="NewsExplorer Home">NewsExplorer</a>
+      <a
+        href="/"
+        className={`header__name${isOnSavedArticlesPage ? (sidebarOpen ? ' header__name--white' : ' header__name--black') : ''}`}
+        aria-label="NewsExplorer Home"
+      >
+        NewsExplorer
+      </a>
       <nav className="header__auth-buttons">
         <ul className="header__nav-list">
           <li>
@@ -122,36 +128,37 @@ function Header({ onSignUpClick, isModalOpen, onModalClose }) {
               <span className="header__name header__sidebar-title">
                 NewsExplorer
               </span>
+              <div className="header__sidebar-nav-row">
+                {/* Only show Home button if NOT on home page */}
+                {!isOnHomePage && (
+                  <button
+                    className="home-button header__sidebar-link"
+                    onClick={handleHomeClick}
+                  >
+                    Home
+                  </button>
+                )}
+                {isLoggedIn && (
+                  <>
+                    <span className="header__user-name">{currentUser?.name}</span>
+                    {/* Only show Saved Articles button if NOT on saved articles page */}
+                    {!isOnSavedArticlesPage && (
+                      <button
+                        className="saved-news-button header__sidebar-link"
+                        onClick={handleSavedArticlesClick}
+                      >
+                        Saved articles
+                      </button>
+                    )}
+                  </>
+                )}
+              </div>
               <button
-                className="home-button header__sidebar-link"
-                onClick={handleHomeClick}
+                className="sign-in-button header__sidebar-signin"
+                onClick={handleLogoutClick}
               >
-                Home
+                Logout
               </button>
-              {isLoggedIn ? (
-                <>
-                  <span className="header__user-name">{currentUser?.name}</span>
-                  <button
-                    className="saved-news-button header__sidebar-link"
-                    onClick={handleSavedArticlesClick}
-                  >
-                    Saved articles
-                  </button>
-                  <button
-                    className="sign-in-button header__sidebar-signin"
-                    onClick={handleLogoutClick}
-                  >
-                    Logout
-                  </button>
-                </>
-              ) : (
-                <button
-                  className="sign-in-button header__sidebar-signin"
-                  onClick={handleSignInClick}
-                >
-                  Sign In
-                </button>
-              )}
             </div>
           </nav>
         </div>

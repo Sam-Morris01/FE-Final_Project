@@ -10,7 +10,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+
 }
 
 /* Header styles for saved articles page */
@@ -20,7 +20,7 @@
 }
 
 .header--theme-saved-articles .header__name {
-  color: #1a1a1a;
+  color: black;
 }
 
 .header--theme-saved-articles .home-button,
@@ -34,7 +34,7 @@
 }
 
 .header--theme-saved-articles .header__hamburger-bar {
-  background: #1a1a1a;
+  background: black;
 }
 
 /* Header styles for home page */
@@ -257,6 +257,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
+  z-index: 101;
 }
 
 .header__sidebar-title {
@@ -265,6 +266,7 @@
   padding: 16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   width: 100%;
+  color: white !important;
 }
 
 .header__sidebar-link {
@@ -357,7 +359,7 @@
 /* Active button states */
 
 .header--theme-saved-articles .header__auth-button {
-  color: black;
+  color: white;
 }
 
 .header__active-indicator {
@@ -369,5 +371,20 @@
   transition:
     left 0.3s,
     width 0.3s;
-  z-index: 2;
+  z-index: 2000;
+}
+
+.header__name--white {
+  color: white !important;
+}
+
+.header__name--black {
+  color: #1a1a1a !important;
+}
+
+.header__sidebar-nav-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
 }
