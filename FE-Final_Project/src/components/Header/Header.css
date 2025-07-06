@@ -310,7 +310,7 @@
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 620px) {
   .header__auth-buttons {
     display: none;
   }

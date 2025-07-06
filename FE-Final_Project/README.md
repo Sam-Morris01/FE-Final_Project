@@ -1,5 +1,7 @@
 # NewsExplorer - My First React Project! 📰
 
+**Live Demo:** [https://sam-morris01.github.io/FE-Final_Project/](https://sam-morris01.github.io/FE-Final_Project/)
+
 Welcome to my first React project! This is a news website where you can search for articles, save your favorites, and manage your account.
 
 ## What This Project Does 🌟

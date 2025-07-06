@@ -42,13 +42,12 @@ function Header({ onSignUpClick, isModalOpen, onModalClose }) {
 
   return (
     <header className={headerClasses}>
-      <a
-        href="/"
+      <span
         className={`header__name${isOnSavedArticlesPage ? (sidebarOpen ? ' header__name--white' : ' header__name--black') : ''}`}
         aria-label="NewsExplorer Home"
       >
         NewsExplorer
-      </a>
+      </span>
       <nav className="header__auth-buttons">
         <ul className="header__nav-list">
           <li>
@@ -129,15 +128,12 @@ function Header({ onSignUpClick, isModalOpen, onModalClose }) {
                 NewsExplorer
               </span>
               <div className="header__sidebar-nav-row">
-                {/* Only show Home button if NOT on home page */}
-                {!isOnHomePage && (
-                  <button
-                    className="home-button header__sidebar-link"
-                    onClick={handleHomeClick}
-                  >
-                    Home
-                  </button>
-                )}
+                <button
+                  className="home-button header__sidebar-link"
+                  onClick={handleHomeClick}
+                >
+                  Home
+                </button>
                 {isLoggedIn && (
                   <>
                     <span className="header__user-name">{currentUser?.name}</span>
@@ -153,12 +149,21 @@ function Header({ onSignUpClick, isModalOpen, onModalClose }) {
                   </>
                 )}
               </div>
-              <button
-                className="sign-in-button header__sidebar-signin"
-                onClick={handleLogoutClick}
-              >
-                Logout
-              </button>
+              {isLoggedIn ? (
+                <button
+                  className="sign-in-button header__sidebar-signin"
+                  onClick={handleLogoutClick}
+                >
+                  Logout
+                </button>
+              ) : (
+                <button
+                  className="sign-in-button header__sidebar-signin"
+                  onClick={handleSignInClick}
+                >
+                  Sign In
+                </button>
+              )}
             </div>
           </nav>
         </div>
