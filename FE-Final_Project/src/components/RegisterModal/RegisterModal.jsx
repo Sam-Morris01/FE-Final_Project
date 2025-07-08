@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import ModalWithForm from "../ModalWithForm/ModalWithForm";
+import ModalBase from "../ModalWithForm/ModalWithForm";
 
-function RegisterModal({ isOpen, onClose, onSwitchToLogin, onRegister }) {
+function RegisterModal({ isOpen, onClose, onSwitchToLogin, onRegister, isLoading = false, error = "" }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -14,7 +14,7 @@ function RegisterModal({ isOpen, onClose, onSwitchToLogin, onRegister }) {
   const isNameValid = name.trim().length > 0;
   const isEmailValid = email.match(/^\S+@\S+\.\S+$/);
   const isPasswordValid = password.length > 0;
-  const isFormValid = isNameValid && isEmailValid && isPasswordValid;
+  const isFormValid = isNameValid && isEmailValid && isPasswordValid && !isLoading;
 
   const handleNameChange = (e) => setName(e.target.value);
   const handleEmailChange = (e) => setEmail(e.target.value);
@@ -42,7 +42,7 @@ function RegisterModal({ isOpen, onClose, onSwitchToLogin, onRegister }) {
   );
 
   return (
-    <ModalWithForm
+    <ModalBase
       isOpen={isOpen}
       onClose={onClose}
       title="Sign up"
@@ -111,7 +111,7 @@ function RegisterModal({ isOpen, onClose, onSwitchToLogin, onRegister }) {
           Sign up
         </button>
       </form>
-    </ModalWithForm>
+    </ModalBase>
   );
 }
 

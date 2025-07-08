@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ModalWithForm from "../ModalWithForm/ModalWithForm";
+import ModalBase from "../ModalWithForm/ModalWithForm";
 
 function LoginModal({
   isOpen,
@@ -42,7 +42,7 @@ function LoginModal({
   );
 
   return (
-    <ModalWithForm
+    <ModalBase
       isOpen={isOpen}
       onClose={onClose}
       title="Sign in"
@@ -95,7 +95,7 @@ function LoginModal({
           {isLoading ? "Signing in..." : "Sign in"}
         </button>
       </form>
-    </ModalWithForm>
+    </ModalBase>
   );
 }
 

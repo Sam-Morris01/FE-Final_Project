@@ -25,11 +25,11 @@ function SavedArticles() {
         ) : (
           <>
             <header className="saved-articles__header">
-              <h3 className="saved-articles__title">Saved articles</h3>
-              <h4 className="saved-articles__subtitle">
+              <h1 className="saved-articles__title">Saved articles</h1>
+              <h2 className="saved-articles__subtitle">
                 {currentUser?.name}, you have {savedArticles.length} saved
                 article{savedArticles.length !== 1 ? "s" : ""}
-              </h4>
+              </h2>
               <p className="saved-articles__keyword">
                 By keywords:
                 <span className="saved-articles__keyword-text">Nature,</span>

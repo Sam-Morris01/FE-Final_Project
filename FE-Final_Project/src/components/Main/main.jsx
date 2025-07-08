@@ -7,7 +7,7 @@ import NothingFound from "../NothingFound/NothingFound.jsx";
 import { useState } from "react";
 import { searchNews } from "../../utils/newsAPI";
 
-function Main({ onSignUpClick }) {
+function Main({ onSignUpClick, isModalOpen, onModalClose}) {
   const [visibleCards, setVisibleCards] = useState(3);
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -67,7 +67,7 @@ function Main({ onSignUpClick }) {
 
   return (
     <main className="main">
-      <Upper onSignUpClick={onSignUpClick} onSearch={handleSearch} />
+      <Upper onSignUpClick={onSignUpClick} onSearch={handleSearch} isModalOpen={isModalOpen} onModalClose={onModalClose} />
       {hasSearched && (
         <div className="main__news-cards">
           {isLoading ? (

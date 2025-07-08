@@ -297,6 +297,23 @@
   align-self: center;
 }
 
+.header__auth-button--active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  z-index: 2;
+}
+
+.header--theme-saved-articles .header__auth-button--active::after {
+  background: #1a1a1a;
+}
+
 @media (max-width: 965px) {
   .header {
     padding-right: 40px;
@@ -308,7 +325,13 @@
 
     font-weight: 500;
   }
+
+  .header__auth-button--active::after {
+    bottom: -22px;
+  }
+  
 }
+
 
 @media (max-width: 620px) {
   .header__auth-buttons {
@@ -333,7 +356,7 @@
 }
 
 .header__modal-close {
-  display: none;
+  /* display: none; */
   position: absolute;
   top: 24px;
   right: 24px;
@@ -388,3 +411,12 @@
   align-items: center;
   gap: 16px;
 }
+
+.header--theme-saved-articles .logout-button.header__auth-button {
+  color: #1a1a1a !important;
+}
+
+.header__auth-button--active {
+  position: relative;
+}
+

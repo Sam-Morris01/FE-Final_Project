@@ -4,11 +4,10 @@ import RegisterModal from "../RegisterModal/RegisterModal";
 import SuccessModal from "../SuccessModal/SuccessModal";
 import { useUser } from "../../contexts/UserContext";
 
-function AuthModalManager({ isOpen, onClose }) {
+function AuthModalManager({ isOpen, onClose, isSuccessModalOpen, onOpenSuccessModal, onCloseSuccessModal }) {
   const [mode, setMode] = useState("login"); // 'login' or 'register'
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
-  const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
   const { handleLogin } = useUser();
 
   const handleSwitchToRegister = () => {
@@ -46,8 +45,7 @@ function AuthModalManager({ isOpen, onClose }) {
 
     try {
       // Simulate registration logic
-      // Show success modal after registration
-      setIsSuccessModalOpen(true);
+      onOpenSuccessModal(); // Open success modal via prop
       setMode("login"); // Optionally switch to login mode
       onClose(); // Close the auth modal
     } catch (err) {
@@ -55,10 +53,6 @@ function AuthModalManager({ isOpen, onClose }) {
     } finally {
       setIsLoading(false);
     }
-  };
-
-  const handleCloseSuccessModal = () => {
-    setIsSuccessModalOpen(false);
   };
 
   return (
@@ -85,11 +79,10 @@ function AuthModalManager({ isOpen, onClose }) {
       )}
       <SuccessModal
         isOpen={isSuccessModalOpen}
-        onClose={handleCloseSuccessModal}
-        title="Success!"
+        onClose={onCloseSuccessModal}
         message="Registration successfully completed!"
         buttonText="Sign in"
-        onButtonClick={handleCloseSuccessModal}
+        onButtonClick={onCloseSuccessModal}
       />
     </>
   );

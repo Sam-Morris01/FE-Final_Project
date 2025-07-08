@@ -13,20 +13,33 @@ import { useState } from "react";
 
 function App() {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
 
   const handleOpenAuthModal = () => setIsAuthModalOpen(true);
   const handleCloseAuthModal = () => setIsAuthModalOpen(false);
 
+  const handleOpenSuccessModal = () => setIsSuccessModalOpen(true);
+  const handleCloseSuccessModal = () => setIsSuccessModalOpen(false);
+
+  // New: close both modals
+  const handleCloseAllModals = () => {
+    setIsAuthModalOpen(false);
+    setIsSuccessModalOpen(false);
+  };
+
   return (
     <UserProvider>
       <SavedArticlesProvider>
-
         <Routes>
           <Route 
             path="/" 
             element={
               <>
-                <Main onSignUpClick={handleOpenAuthModal} />
+                <Main
+                  onSignUpClick={handleOpenAuthModal}
+                  isModalOpen={isAuthModalOpen || isSuccessModalOpen}
+                  onModalClose={handleCloseAllModals}
+                />
                 <About />
               </>
             } 
@@ -44,6 +57,9 @@ function App() {
         <AuthModalManager
           isOpen={isAuthModalOpen}
           onClose={handleCloseAuthModal}
+          isSuccessModalOpen={isSuccessModalOpen}
+          onOpenSuccessModal={handleOpenSuccessModal}
+          onCloseSuccessModal={handleCloseSuccessModal}
         />
       </SavedArticlesProvider>
     </UserProvider>

@@ -37,7 +37,7 @@
 
 .about__text-content {
   max-width: 600px;
-  text-align: center;
+  text-align: left;
   flex: 1;
 }
 
@@ -48,6 +48,7 @@
   line-height: 46px;
   color: rgba(26, 27, 34, 1);
   margin-bottom: 0px;
+
 }
 
 .about__main-paragraph {
@@ -56,6 +57,7 @@
   font-weight: 400;
   line-height: 24px;
   color: rgba(26, 27, 34, 1);
+  text-align: left;
 }
 
 @media (max-width: 1024px) {
@@ -81,8 +83,8 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    
     gap: 24px;
   }
 }

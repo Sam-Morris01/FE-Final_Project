@@ -4,13 +4,13 @@ import SearchForm from "../SearchForm/SearchForm.jsx";
 import React from "react";
 import { useUser } from "../../contexts/UserContext";
 
-function Upper({ onSignUpClick, onSearch }) {
+function Upper({ onSignUpClick, onSearch, isModalOpen, onModalClose }) {
   const { isLoggedIn } = useUser();
 
   return (
     <div className="hero-background">
       <section className="upper">
-        <Header onSignUpClick={onSignUpClick} />
+        <Header onSignUpClick={onSignUpClick} isModalOpen={isModalOpen} onModalClose={onModalClose} />
         <SearchForm onSearch={onSearch} />
       </section>
     </div>
