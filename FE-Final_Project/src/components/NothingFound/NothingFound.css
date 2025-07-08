@@ -1,0 +1,56 @@
+.nothing-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.nothing-found__icon {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 24px;
+}
+
+.nothing-found__title {
+  font-family: "Roboto Slab", serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #1a1b22;
+  margin: 0 0 16px 0;
+}
+
+.nothing-found__text {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #b6bcbf;
+  margin: 0;
+  max-width: 356px;
+}
+
+@media (max-width: 768px) {
+  .nothing-found {
+    padding: 40px 20px;
+  }
+
+  .nothing-found__icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 16px;
+  }
+
+  .nothing-found__title {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
+
+  .nothing-found__text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
