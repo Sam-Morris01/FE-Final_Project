@@ -303,7 +303,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -20px;
+  bottom: -23px;
   height: 3px;
   background: white;
   border-radius: 2px;
@@ -327,11 +327,16 @@
   }
 
   .header__auth-button--active::after {
-    bottom: -22px;
+    bottom: -25px;
   }
   
 }
 
+@media (max-width: 762px) {
+  .header__auth-button--active::after {
+    bottom: -12px;
+  }
+}
 
 @media (max-width: 620px) {
   .header__auth-buttons {
@@ -382,7 +387,7 @@
 /* Active button states */
 
 .header--theme-saved-articles .header__auth-button {
-  color: white;
+  color: black;
 }
 
 .header__active-indicator {
